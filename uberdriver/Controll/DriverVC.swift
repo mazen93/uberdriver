@@ -127,6 +127,7 @@ class DriverVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate,Ub
     
     @IBAction func CancelUberButton(_ sender: Any) {
         if acceptedUber{
+            cancelUberBtn.isHidden=true
             driverCanceledUber=true
             cancelUberBtn.isHidden=true
             UberHandler.Instance.cancelUberforDriver()
@@ -134,9 +135,11 @@ class DriverVC: UIViewController ,CLLocationManagerDelegate,MKMapViewDelegate,Ub
             // invalidate timer
              timer.invalidate()
             
-            
+         
             
         }
+        
+     
     }
     
     
